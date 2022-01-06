@@ -3,11 +3,11 @@
  * @Autor: fylih
  * @Date: 2022-01-06 11:18:24
  * @LastEditors: fylih
- * @LastEditTime: 2022-01-06 17:20:53
+ * @LastEditTime: 2022-01-06 17:36:06
 -->
 <template>
   <div id="nav">
-    <router-link to="/">Hommy</router-link> |
+    <router-link to="/">Hommyttttt</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <router-view />
