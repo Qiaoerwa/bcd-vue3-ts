@@ -1,0 +1,23 @@
+// element弹窗title
+.el-dialog__header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  .el-dialog__title {
+    font-weight: bold;
+  }
+}
+
+// 修改分页样式
+.el-pagination {
+  .btn-prev,.btn-next,.number{
+    padding: 0;
+    width: 24px; /*no*/
+    min-width: 24px; /*no*/
+    height: 24px; /*no*/
+    line-height: 24px; /*no*/
+  }
+  .number.active {
+    color: @primaryColor;
+    border: 1px solid @primaryColor; /*no*/
+    border-radius: 2px; /*no*/
+  }
+}

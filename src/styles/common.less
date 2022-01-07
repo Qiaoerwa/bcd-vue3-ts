@@ -1,0 +1,105 @@
+/*
+ * @Description: 公共样式
+ * @Author: ly
+ * @Date: 2021-05-18 17:29:02
+ * @LastEditors: fylih
+ * @LastEditTime: 2021-12-22 11:18:24
+ */
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+}
+
+// 表格种状态显示前点
+._red_spot {
+  display: flex;
+  align-items: center;
+  &::before {
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #fc544b;
+  }
+}
+._yellow_spot {
+  display: flex;
+  align-items: center;
+  &::before {
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #e6ac00;
+  }
+}
+._green_spot {
+  display: flex;
+  align-items: center;
+  &::before {
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #16ca88;
+  }
+}
+
+// 添加_plain_btn  class
+.el-button._plain_btn,
+button._plain_btn {
+  color: @primaryColor;
+  font-size: 14px;
+  padding: 0 20px;
+  height: 32px;
+  border-radius: 2px; /*no*/
+  background: #fff;
+  border: 1px solid @primaryColor;
+  &:hover,
+  &:active,
+  &:focus {
+    color: @primaryColor;
+    background: #fff;
+    border: 1px solid @primaryColor;
+  }
+}
+
+// 添加_primary_btn  class
+.el-button._primary_btn,
+button._primary_btn {
+  color: #fff;
+  font-size: 14px;
+  padding: 0 20px;
+  height: 32px;
+  border-radius: 2px; /*no*/
+  background: @primaryColor;
+  border: 1px solid @primaryColor;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    background: @primaryColor;
+    border: 1px solid @primaryColor;
+  }
+}
+
+// chrome滚动条
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+} /* 滚动条的滑轨背景颜色 */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(220, 220, 220);
+  border-radius: 5px;
+}
+
