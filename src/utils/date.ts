@@ -3,11 +3,11 @@
  * @Autor: fylih
  * @Date: 2021-06-07 16:53:38
  * @LastEditors: fylih
- * @LastEditTime: 2022-01-07 17:04:01
+ * @LastEditTime: 2022-01-21 15:15:19
  */
-export function _formatDate(date: Date, fmt: string) {
+export function _formatDate(date: Date, fmt: string): string {
 
-    var o: any = {
+    const o: any = {
         'y+': date.getFullYear(),
         'M+': date.getMonth() + 1, // 月份
         'd+': date.getDate(), // 日
@@ -17,13 +17,13 @@ export function _formatDate(date: Date, fmt: string) {
         'q+': Math.floor((date.getMonth() + 3) / 3), // 季度
         'S+': date.getMilliseconds() // 毫 
     }
-
-    for (var k in o) {
+    let k: string
+    for (k in o) {
         if (new RegExp('(' + k + ')').test(fmt)) {
             if (k === 'y+') {
                 fmt = fmt.replace(RegExp.$1, ('' + o[k]).substr(4 - RegExp.$1.length))
             } else if (k === 'S+') {
-                var lens = RegExp.$1.length
+                let lens = RegExp.$1.length
                 lens = lens === 1 ? 3 : lens
                 fmt = fmt.replace(
                     RegExp.$1,

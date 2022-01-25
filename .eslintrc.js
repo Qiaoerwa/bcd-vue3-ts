@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Autor: fylih
+ * @Date: 2022-01-06 11:18:24
+ * @LastEditors: fylih
+ * @LastEditTime: 2022-01-21 15:16:24
+ */
 module.exports = {
   root: true,
   env: {
@@ -13,6 +20,8 @@ module.exports = {
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "suppressImplicitAnyIndexErrors": 'off',
   }
 }
